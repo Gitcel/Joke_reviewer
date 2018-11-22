@@ -1,0 +1,41 @@
+CREATE DATABASE IF NOT EXISTS joke_reviewer;
+
+USE joke_reviewer;
+
+CREATE TABLE IF NOT EXISTS users (
+
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+CREATE TABLE IF NOT EXISTS jokes (
+
+    id INT NOT NULL PRIMARY KEY,
+    setup VARCHAR(255) NOT NULL,
+    punchline VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+CREATE TABLE IF NOT EXISTS reviews (
+
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    joke_id INT NOT NULL,
+    rating INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (joke_id) REFERENCES jokes(id)
+
+);
+
+INSERT INTO users (name, email, password)
+VALUES ("Ancel", "cel.fortuin@gmail.com", "passw0rd");
