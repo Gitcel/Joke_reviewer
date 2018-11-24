@@ -151,7 +151,7 @@
 
         require "config.php";
 
-        global $servername, $username, $password, $dbname, $port, $password_hash;
+        global $servername, $username, $password, $dbname, $port;
 
         $connection = mysqli_connect($servername, $username, $password, $dbname, $port);
         // If connection fails, return false.
@@ -178,7 +178,7 @@
             
         } else {
 
-            unset($_SESSION['user']);
+            header("Location: ../public/index.php");
 
         }
 
