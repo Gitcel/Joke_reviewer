@@ -1,7 +1,8 @@
 <?php
     
-    include "templates/header.php";    
-    ?><style><?php include "templates/css/jokes_style.css"; ?></style><?php
+    include "templates/header.php"; 
+    header("href=css/jokes_style.css type=text/css rel=stylesheet");   
+
     require "../data/functions.php";
     require "../data/config.php";
 

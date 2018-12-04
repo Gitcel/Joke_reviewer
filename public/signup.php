@@ -1,8 +1,6 @@
 <?php include "templates/header.php"; ?>
-<style>
-    <?php include "templates/css/jokes_style.css"; ?>
-</style>
 <?php include "../data/functions.php"; ?>
+<?php header("href=css/jokes_style.css type=text/css rel=stylesheet"); ?>
 
 <?php logout(); ?>
 <?php $_SESSION['user']['logged-in'] = false; ?>

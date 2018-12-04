@@ -11,7 +11,7 @@
         $ch = curl_init(); 
 
         // Set the URL. 
-        curl_setopt($ch, CURLOPT_URL, "https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_joke"); 
+        curl_setopt($ch, CURLOPT_URL, "https://safe-falls-22549.herokuapp.com/random_joke"); 
 
         // Return the transfer as a string.
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
@@ -175,6 +175,8 @@
                 $_SESSION['user']['logged-in'] = true;
             
             }
+
+            header("Location: ../public/jokes.php");
             
         } else {
 

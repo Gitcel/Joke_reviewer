@@ -1,8 +1,13 @@
 <?php include "templates/header.php"; ?>
-<style>
-    <?php include "templates/css/jokes_style.css"; ?>
-</style>
 <?php include "../data/functions.php"; ?>
+
+<?php
+
+    if ($_SESSION['user']['logged-in'] == false) {
+        header("Location: ../public/index.php");
+    }
+
+?>
 
 <?php
 

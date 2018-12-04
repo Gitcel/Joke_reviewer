@@ -1,8 +1,6 @@
 <?php include "templates/header.php"; ?>
-<style>
-    <?php include "templates/css/jokes_style.css"; ?>
-</style>
 <?php include "../data/functions.php"; ?>
+<?php //include "../data/config.php"; ?>
 
     <?php
 
@@ -20,7 +18,7 @@
 
         <div class="title-class">JOKE REVIEWER</div>
 
-        <form action="index.php" method="post" id="form-index-id">
+        <form action="" method="post" id="form-index-id">
 
             <div class="form-group">
                 <label for="text" class="label-index-class">User name</label>
@@ -42,5 +40,5 @@
         </form>
 
     </div>
-
+    
 <?php include "templates/footer.php"; ?>

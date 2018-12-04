@@ -7,20 +7,15 @@
     $connection = mysqli_connect($servername, $username, $password, "", $port);
 
     if (!$connection) {
-        die("Connection failed: ".mysqli_connect_error());
+        die("Connection failed: ".mysqli_connect_error()."<br>");
     } else {
-        echo "Connected.";
+        echo "Connected.<br>";
     }
 
-    ?><pre><?
-        print_r($connection);
-        print_r($getContents);
-    ?><pre><?
-    
     if (mysqli_multi_query($connection, $getContents)) {
-        echo "Tables created.";  
+        echo "Database and tables were created.<br>";  
     } else {
-        echo "Tables couldn't be created.";
+        echo "The database and/or tables couldn't be created.<br>";
     }
 
     mysqli_close($connection);
