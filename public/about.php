@@ -1,6 +1,5 @@
 <?php include "templates/header.php"; ?>
 <?php include "../data/functions.php"; ?>
-<?php header("href=css/jokes_style.css type=text/css rel=stylesheet"); ?>
 
 <?php logout(); ?>
 

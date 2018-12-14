@@ -15,9 +15,7 @@
     $joke = getJoke();
 
     // Store the joke in the database.
-    if ($joke != null) {
-        storeJoke($joke);
-    }
+    storeJoke($joke);
     
     // Check if the joke variable contains the JSON-decoded object, before storing it in the database.
     if (isset($_POST['rate-button'])) {

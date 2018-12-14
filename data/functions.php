@@ -46,7 +46,7 @@
 
         $_SESSION['user']['joke-id'] = $jokeID;
 
-        $sql = "INSERT INTO jokes (id, setup, punchline) VALUES (\'$jokeID\', \'$jokeSetup\', \'$jokePunchline\')";
+        $sql = "INSERT INTO jokes (id, setup, punchline) VALUES ('$jokeID', '$jokeSetup', '$jokePunchline')";
         $result = mysqli_query($connection, $sql);
 
     }
@@ -180,7 +180,7 @@
             
         } else {
 
-            header("Location: ../public/index.php");
+            $_SESSION['user']['logged-in'] = false;
 
         }
 

@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS joke_reviewer;
+CREATE DATABASE IF NOT EXISTS anc25243_database_anc_fort;
 
-USE joke_reviewer;
+USE anc25243_database_anc_fort;
 
 CREATE TABLE IF NOT EXISTS users (
 
